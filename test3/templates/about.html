@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Font Awesome CSS -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo1OGXjtvB+YHb8ZkDe0va6D/vOJ5P1XwCr1l+6" crossorigin="anonymous">
+
+    <style>
+        body {
+            background: linear-gradient(to right,rgba(32,15,72,1) ,rgba(59,31,122,1) );
+            color: white;
+            padding-top: 30px;
+            height: auto;
+        }
+        
+        .navbar {
+            background-color: transparent;
+        }
+        
+        .navbar-brand {
+            color: white;
+        }
+        
+        .navbar-toggler {
+            color: white;
+        }
+        
+        .navbar-nav .nav-link {
+            color: white;
+        }
+        
+        .navbar-nav {
+            margin-right: 150px;
+        }
+
+        .text1 {
+            background-color: #f0f0f036; /* Light grey background */
+            padding: 20px; /* Add padding for better readability */
+            border-radius: 10px; /* Rounded corners */
+            margin-top: 30px; /* Add space between text1 and image */
+            font-size: 24px; /* Increase font size */
+        }
+        
+        .text2 {
+            background-color: #f0f0f036; /* Light purple background */
+            padding: 20px; /* Add padding for better readability */
+            border-radius: 10px; /* Rounded corners */
+            font-size: 24px; /* Increase font size */
+        }
+
+        .footer-image {
+            width: 400px; /* Make the image responsive */
+            max-height: 400px; /* Limit maximum height */
+            border-radius: 10px; /* Rounded corners for the image */
+            position: fixed; /* Fixed positioning */
+            top: auto;
+            bottom: auto;
+            left: 100px; /* Align to the left */
+        }
+
+        @media (max-width: 768px) {
+            .footer-image {
+                position: relative; /* Change to relative positioning on smaller screens */
+                width: auto; /* Remove fixed width */
+                max-width: 100%; /* Ensure image doesn't overflow on smaller screens */
+                margin-top: 20px; /* Add space between image and content on smaller screens */
+            }
+        }
+      
+        
+    </style>
+</head>
+<body>
+
+    <nav class="navbar navbar-expand-lg fixed-top">
+        <a class="navbar-brand" href="{{ url_for('index') }}" style="margin-left: 70px;">
+            <img src="{{ url_for('static', filename='images/icons8-raised-hands-50.png') }}" alt="" style="width: 40px; height: 40px; margin-bottom: 2px;">
+            SIGNZ    
+        </a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item active" style="margin-right: 30px;">
+                    <a class="nav-link" href="about.html"></a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="{{ url_for('tryItNow') }}">Try it now</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-6 text-content">
+                <div class="text1">Welcome to SIGNZ!
+                    Our mission is to break down language
+                    barriers and foster inclusivity by
+                    providing innovative solutions for sign
+                    language communication.
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-6">
+                <img src="{{ url_for('static', filename='images/y93bunjg-removebg-preview.png') }}" alt="" class="footer-image">
+            </div>        
+            <div class="col-md-6 text-content2">
+                <div class="text2">Whether you're a sign language user,
+                    a language enthusiast, or someone
+                    seeking to bridge communication
+                    gaps, we're here to support you every
+                    step of the way. Join us on our
+                    journey to make the world a more
+                    accessible and connected place for
+                    all.
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    
+
+        
+        <!-- Bootstrap JS (optional) -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+</body>
+</html>

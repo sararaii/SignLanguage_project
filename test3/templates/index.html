@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Font Awesome CSS -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo1OGXjtvB+YHb8ZkDe0va6D/vOJ5P1XwCr1l+6" crossorigin="anonymous">
+
+
+   
+    
+    <style>
+        body {
+            background: linear-gradient(to right,rgba(32,15,72,1) ,rgba(59,31,122,1) );
+            color: white;
+            padding-top: 60px;
+        }
+        
+        .navbar {
+            background-color: transparent;
+        }
+        
+        .navbar-brand {
+            color: white;
+        }
+        
+        .navbar-toggler {
+            color: white;
+        }
+        
+        .navbar-nav .nav-link {
+            color: white;
+        }
+        
+        .navbar-nav {
+            margin-right: 150px;
+        }
+        
+        .text-content {
+            padding: 20px;
+        }
+        
+        .image-content {
+            text-align: right;
+            padding: 20px;
+        }
+        
+        @media (max-width: 768px) {
+            .image-content {
+                text-align: center;
+            }
+        }
+        .circle-background {
+            width: 40px;
+            height: 40px;
+            border-radius: 50%; /* This creates a circular shape */
+            background-color: rgba(0, 0, 0, 0.452);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        
+        .arrow-img {
+            width: 20px; /* Adjust the size of the arrow image */
+            height: 20px; /* Adjust the size of the arrow image */
+        }
+        
+        
+        .rounded-rectangle {
+            background-color: #f0f0f027;
+            border-radius: 45px;
+            padding: 10px;
+            margin-top: 30px;
+            display: flex;
+            align-items: center;
+        }
+        
+        .icons-container {
+            display: flex;
+        }
+        
+        .arrow-container {
+            margin-left: auto;
+        }
+        .arrow-link{
+            width: 40px;
+        }
+        
+    </style>
+</head>
+<body>
+
+    <nav class="navbar navbar-expand-lg fixed-top">
+        <a class="navbar-brand" href="{{ url_for('about') }}" style="margin-left: 70px;">
+            <img src="{{ url_for('static', filename='images/icons8-raised-hands-50.png') }}" alt="" style="width: 40px; height: 40px; margin-bottom: 2px;">
+            SIGNZ    
+        </a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item active" style="margin-right: 50px;">
+                    <a class="nav-link" href="{{ url_for('about') }}">About</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="{{ url_for('tryItNow') }}">Try it now</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+    
+
+<div class="container">
+    <div class="row">
+        <div class="col-md-6 text-content" style="margin-top: 80px;">
+            <h1>Unlock seamless communication across languages with our Sign Language Translation platform</h1>
+            <div class="rounded-rectangle">
+                <div class="icons-container">
+                    <img src="{{ url_for('static', filename='images/icons8-sign-language-t-50.png') }}" alt="Icon 1" class="icon">
+                    <img src="{{ url_for('static', filename='images/icons8-sign-language-r-50.png') }}" alt="Icon 2" class="icon">
+                    <img src="{{ url_for('static', filename='images/icons8-sign-language-y-50.png') }}" alt="Icon 3" class="icon">
+                </div>
+                <div class="arrow-container">
+                    <a href="{{ url_for('tryItNow') }}" class="arrow-link">
+                        <div class="circle-background">
+                            <img class="arrow-img" src="{{ url_for('static', filename='images/icons8-right-arrow-50.png') }}" alt="">
+                        </div>      
+                    </a>
+                </div>
+                
+            </div>
+            
+            
+        </div>
+        
+        <div class="col-md-6 image-content">   
+            <img src="{{ url_for('static', filename='images/istockphoto-1279791898-170667a-removebg-preview.png') }}" style=" width: 900px; height: 490px;" alt="Image" class="img-fluid">
+        </div>
+    </div>
+</div>
+
+<!-- Bootstrap JS (optional) -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+</body>
+</html>
